@@ -1,0 +1,57 @@
+.portal-doughnut-widget {
+  padding: 24px;
+}
+
+.portal-doughnut-widget__chart {
+  padding: 24px;
+  position: relative;
+  height: 200px;
+}
+
+.portal-widget__doughnut-labels {
+  text-align: center;
+  margin-top: 20px;
+  // .mat-display-1 {
+  //   margin-bottom: 0;
+  // }
+  .portal-widget__doughnut-labels__icon {
+    position: relative;
+    margin-bottom: 8px;
+    width: 24px;
+    display: inline-block;
+    .portal-widget__doughnut-labels__icon__bullet {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      animation-name: bounce;
+      animation-duration: 4s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+  }
+  > div:nth-child(1) .portal-widget__doughnut-labels__icon__bullet {
+    animation-delay: 0s;
+  }
+  > div:nth-child(2) .portal-widget__doughnut-labels__icon__bullet {
+    animation-delay: .3s;
+  }
+  > div:nth-child(3) .portal-widget__doughnut-labels__icon__bullet {
+    animation-delay: .6s;
+  }
+}
+
+
+@keyframes bounce {
+  0%, 20% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-15px);
+    opacity: .5;
+  }
+}
